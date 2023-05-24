@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>CADASTRO DE PRODUTO</h1>
+
+    <form #fc="ngForm" >
+        <ion-list>
+       
+        <ion-item class="pt-10">
+            <ion-input  label="nome"  label-placement="floating" fill="outline"  placeholder="Digite seu nome" [(ngModel)]="produto.nome" name="nome" required ></ion-input>
+          </ion-item>
+        <ion-item class="pt-10">
+          <ion-input type="categoria" label="categoria" label-placement="floating" fill="outline" placeholder="Digite a categoria"  [(ngModel)]="produto.categoria" name="categoria" required></ion-input>
+        </ion-item>
+    
+        <ion-item class="pt-10">
+          <ion-input label="descricao" label-placement="floating" fill="outline" placeholder="Digite sua descricao"  [(ngModel)]="produto.descricao" name="descricao" required></ion-input>
+        </ion-item>
+    
+        <ion-item class="pt-10">
+          <ion-input label="quant" label-placement="floating" fill="outline" placeholder="Digite a quantidade " [(ngModel)]="produto.quant" name="quant" required></ion-input>
+        </ion-item>
+
+        <ion-item class="pt-10">
+            <ion-input label="valor" label-placement="floating" fill="outline" placeholder="Digite o valor " [(ngModel)]="produto.valor" name="valor" required></ion-input>
+          </ion-item>
+    
+        <ion-item class="pt-10">
+          
+          <ion-button [disabled]="fc.invalid" slot="end" (click)="save()">Salvar</ion-button> 
+          <ion-button color="danger" slot="end">Cancelar</ion-button>
+        </ion-item>
+
+    
+      </ion-list>
+      </form>
+  
+</ion-content>
